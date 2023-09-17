@@ -14,9 +14,9 @@ export default function Footer() {
         <div className="flex flex-col p-2 justify-between">
           <ul className="font-bold">
             <li className="p-2"><Link href={"/pricing"}>Pricing</Link></li>
-            <li className="p-2"><a href="#">FAQs</a></li>
-            <li className="p-2"><a href="#">Contact Us</a></li>
-            <li className="p-2"><a href="#">Demo</a></li>
+            <li className="p-2 pointer-events-none"><a href="">FAQs</a></li>
+            <li className="p-2 pointer-events-none"><a href="">Contact Us</a></li>
+            <li className="p-2 pointer-events-none"><a href="">Demo</a></li>
           </ul>
             <p className="p-2">© 2023 SignPro Manager</p>
         </div>
@@ -42,7 +42,7 @@ export default function Footer() {
             <a href="https://www.buymeacoffee.com/danielrendon" target="_blank">
               <BiCoffeeTogo className="mx-2" />
             </a>
-            <a href="#">
+            <a href="" className=" pointer-events-none">
               <BiSolidPizza className="mx-2" />
             </a>
           </div>

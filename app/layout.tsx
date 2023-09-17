@@ -30,9 +30,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" style={{scrollBehavior:'smooth'}}>
       <body className={sansation.className}>
-        <div className="flex-col">
+        <div className="flex-col selection:bg-orange-400 scroll-smooth">
           <HomeNavbar />
           {children}
           <Footer />

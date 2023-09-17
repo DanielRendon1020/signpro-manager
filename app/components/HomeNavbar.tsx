@@ -18,10 +18,10 @@ export default function HomeNavbar() {
               </Link>
             </li>
             <li className="mx-8 text-2xl my-auto">
-              <Link href="#">What is it</Link>
+              <Link href="#what-is-it">What is it</Link>
             </li>
             <li className="mx-8 text-2xl my-auto">
-              <Link href="#">Why Us</Link>
+              <Link href="#why-us">Why Us</Link>
             </li>
             <li className="mx-8 text-2xl my-auto">
               <Link href={"/pricing"}>How Much</Link>
@@ -31,7 +31,7 @@ export default function HomeNavbar() {
             <button className="mx-3 my-auto px-5 py-2 bg-white hover:bg-gray-200 rounded-full h-auto text-gray-700">
               Sign In
             </button>
-            <button className="mx-3 my-auto px-5 py-2 bg-orange-500 hover:bg-orange-600 rounded-full h-auto">
+            <button className="mx-3 my-auto px-5 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-full h-auto">
               Sign Up
             </button>
           </div>

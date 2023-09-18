@@ -22,10 +22,10 @@ export default function Footer() {
         </div>
         <div className="flex flex-col font-bold my-auto ms-auto me-12 text-right">
           <p className="p-2 text-2xl">Questions?</p>
-          <hr />
+          <hr className="border-1 border-gray-400" />
           <p className="p-2 text-4xl mb-4">000-000-0000</p>
           <p className="p-2 text-2xl">Follow Us</p>
-          <hr />
+          <hr className="border-1 border-gray-400" />
           <div className="flex justify-end p-2 text-5xl">
             <a
               href="https://github.com/DanielRendon1020/signpro-manager"

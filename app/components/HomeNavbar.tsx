@@ -12,8 +12,8 @@ export default function HomeNavbar() {
                 <Image
                   src="/logo.svg"
                   alt="SignPro Manager"
-                  width={271}
-                  height={100}
+                  width={208}
+                  height={80}
                 />
               </Link>
             </li>

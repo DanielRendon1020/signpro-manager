@@ -13,11 +13,20 @@ export default function Testimonials() {
         modules={[Navigation, Autoplay]}
         spaceBetween={50}
         slidesPerView={1}
-        navigation
+        navigation={{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',}}
+        autoplay={{
+            delay: 3500,
+            disableOnInteraction: false,
+          }}
         pagination={{ clickable: true }}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
       >
+        
+    <button className="swiper-button-next"></button>
+    <button className="swiper-button-prev"></button>
         <SwiperSlide>
           <section className="relative isolate overflow-hidden px-6 py-20 sm:py-32 lg:px-8 ">
             <div className="mx-auto max-w-2xl lg:max-w-4xl">

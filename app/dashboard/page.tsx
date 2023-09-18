@@ -1,12 +1,15 @@
-import { Metadata } from 'next'
+import { Metadata } from "next";
+import ProjectTable from "../components/ProjectTable";
 
 export const metadata: Metadata = {
-    title: 'Dashboard',
-}
-
+  title: "Dashboard",
+};
 
 export default function Dashboard() {
   return (
-    <div>Dashboard</div>
-  )
+    <>
+      <div>Dashboard</div>
+      <ProjectTable />
+    </>
+  );
 }

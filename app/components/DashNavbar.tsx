@@ -21,7 +21,7 @@ export default function DashNavbar() {
               <Link href="/materials">Materials</Link>
             </li>
             <li className="mx-12 text-2xl my-auto hover:text-gray-300">
-              <Link href="/new-job">New Job</Link>
+              <Link href="/new_job">New Job</Link>
             </li>
           </ul>
         </nav>

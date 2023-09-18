@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function DashNavbar() {
   return (
-    <div className="bg-orange-600 px-3">
+    <div className="bg-orange-500 px-3">
       <div className="mx-auto flex justify-between">
         <Image
           src="/logo.svg"

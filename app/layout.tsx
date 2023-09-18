@@ -30,10 +30,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
   const userAuth = false;
   return (
-    <html lang="en" style={{scrollBehavior:'smooth'}}>
+    <html lang="en" style={{ scrollBehavior: "smooth" }}>
       <body className={sansation.className}>
         <div className="flex-col selection:bg-orange-400 scroll-smooth">
           {userAuth ? <HomeNavbar /> : <DashNavbar />}

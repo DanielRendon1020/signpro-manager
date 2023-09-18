@@ -18,10 +18,10 @@ export default function HomeNavbar() {
               </Link>
             </li>
             <li className="mx-8 text-2xl my-auto">
-              <Link href="#what-is-it">What is it</Link>
+              <Link href="/#what-is-it">What is it</Link>
             </li>
             <li className="mx-8 text-2xl my-auto">
-              <Link href="#why-us">Why Us</Link>
+              <Link href="/#why-us">Why Us</Link>
             </li>
             <li className="mx-8 text-2xl my-auto">
               <Link href={"/pricing"}>How Much</Link>

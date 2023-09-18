@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import HomeNavbar from "./components/HomeNavbar";
 import Footer from "./components/Footer";
+import DashNavbar from "./components/DashNavbar";
 
 const inter = Inter({ subsets: ["latin"] });
 const sansation = localFont({
@@ -29,13 +30,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
+  const userAuth = false;
   return (
     <html lang="en" style={{scrollBehavior:'smooth'}}>
       <body className={sansation.className}>
         <div className="flex-col selection:bg-orange-400 scroll-smooth">
-          <HomeNavbar />
+          {userAuth ? <HomeNavbar /> : <DashNavbar />}
           {children}
-          <Footer />
+          {userAuth ? <Footer /> : <></>}
         </div>
       </body>
     </html>

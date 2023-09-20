@@ -3,18 +3,30 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-  --swiper-navigation-color: rgb(249, 115, 22);
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --swiper-navigation-color: rgb(255,90,31);
 }
 
 
+body {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255,90,31);
+  scrollbar-gutter: stable both-edges;
+}
+
+body::-webkit-scrollbar {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 0.5rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(255,90,31);
+  border-radius: 0.5rem;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(255, 116, 65);
+}
+body::-webkit-scrollbar-track {
+  background-color: white;
+}

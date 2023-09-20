@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { SignInButton } from "./buttons";
 
 export default function HomeNavbar() {
   return (
@@ -28,12 +29,10 @@ export default function HomeNavbar() {
             </li>
           </ul>
           <div className="flex font-bold text-xl">
-            <button className="mx-3 my-auto px-5 py-2 bg-white hover:bg-gray-200 rounded-full h-auto text-gray-700">
+            <SignInButton />
+            {/* <button className="mx-3 my-auto px-5 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-full h-auto">
               Sign In
-            </button>
-            <button className="mx-3 my-auto px-5 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-full h-auto">
-              Sign Up
-            </button>
+            </button> */}
           </div>
         </nav>
       </div>

@@ -4,6 +4,8 @@ import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import HomeNavbar from "./components/HomeNavbar";
 import Footer from "./components/Footer";
+import AuthProvider from "./Auth/AuthProvider";
+import { getServerSession } from 'next-auth';
 import DashNavbar from "./components/DashNavbar";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -25,21 +27,31 @@ export const metadata: Metadata = {
   description: "Manage your projects with ease",
 };
 
-export default function RootLayout({
+
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const userAuth = false;
+
+  const session = await getServerSession();
+
+  // if (session) {
+  //   const showDash = <DashNavbar />
+  //   const noFooter = <></>
+  // }
+
   return (
-    <html lang="en" style={{ scrollBehavior: "smooth" }}>
-      <body className={sansation.className}>
-        <div className="flex-col selection:bg-orange-400 scroll-smooth">
-          {userAuth ? <HomeNavbar /> : <DashNavbar />}
-          {children}
-          {userAuth ? <Footer /> : <></>}
-        </div>
-      </body>
-    </html>
+    <AuthProvider>
+      <html lang="en" style={{ scrollBehavior: "smooth" }}>
+        <body className={sansation.className}>
+          <div className="flex-col selection:bg-orange-400 scroll-smooth">
+            {(!session) ? <HomeNavbar /> : <DashNavbar />}
+            {children}
+            {(!session) ? <Footer /> : <></>}
+          </div>
+        </body>
+      </html>
+    </AuthProvider>
   );
 }

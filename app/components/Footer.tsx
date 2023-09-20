@@ -6,6 +6,7 @@ import {
   BiCoffeeTogo,
   BiSolidPizza,
 } from "react-icons/bi";
+import AuthCheck from "../Auth/AuthCheck";
 
 export default function Footer() {
   return (

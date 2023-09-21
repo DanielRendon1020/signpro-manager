@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { SignInButton } from "./buttons";
+import { SignInButton } from "../client/buttons";
 
 export default function HomeNavbar() {
   return (

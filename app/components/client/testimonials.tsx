@@ -21,8 +21,6 @@ export default function Testimonials() {
             disableOnInteraction: false,
           }}
         pagination={{ clickable: true }}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
       >
         
     <button className="swiper-button-next"></button>

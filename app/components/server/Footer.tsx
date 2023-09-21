@@ -4,9 +4,8 @@ import {
   BiLogoGithub,
   BiLogoLinkedin,
   BiCoffeeTogo,
-  BiSolidPizza,
+  BiSolidCat,
 } from "react-icons/bi";
-import AuthCheck from "../Auth/AuthCheck";
 
 export default function Footer() {
   return (
@@ -32,19 +31,19 @@ export default function Footer() {
               href="https://github.com/DanielRendon1020/signpro-manager"
               target="_blank"
             >
-              <BiLogoGithub className="mx-2" />
+              <BiLogoGithub className="mx-2 hover:text-orange-500" />
             </a>
             <a
               href="https://www.linkedin.com/in/danielrendon-dev/"
               target="_blank"
             >
-              <BiLogoLinkedin className="mx-2" />
+              <BiLogoLinkedin className="mx-2 hover:text-orange-500" />
             </a>
             <a href="https://www.buymeacoffee.com/danielrendon" target="_blank">
-              <BiCoffeeTogo className="mx-2" />
+              <BiCoffeeTogo className="mx-2 hover:text-orange-500" />
             </a>
-            <a href="" className=" pointer-events-none">
-              <BiSolidPizza className="mx-2" />
+            <a href="https://g.co/kgs/5nvWCN" target="_blank">
+              <BiSolidCat className="mx-2 hover:text-orange-500" />
             </a>
           </div>
         </div>

@@ -1,4 +1,6 @@
 import { Metadata } from "next";
+import HomeNavbar from "../components/server/HomeNavbar";
+import Footer from "../components/server/Footer";
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -7,6 +9,7 @@ export const metadata: Metadata = {
 export default function Pricing() {
   return (
     <>
+    <HomeNavbar />
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl sm:text-center">
@@ -130,7 +133,7 @@ export default function Pricing() {
             </div>
           </div>
         </div>
-      </div>
+      </div><Footer/>
     </>
   );
 }

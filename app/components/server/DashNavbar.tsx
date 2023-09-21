@@ -1,9 +1,7 @@
-"use client";
 
 import Image from "next/image";
 import Link from "next/link";
-import "flowbite";
-import { SignOutButton } from "./buttons";
+import { SignOutButton } from "../client/buttons";
 
 export default function DashNavbar() {
   return (

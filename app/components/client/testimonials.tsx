@@ -29,7 +29,7 @@ export default function Testimonials() {
           <section className="relative isolate overflow-hidden px-6 py-20 sm:py-32 lg:px-8 ">
             <div className="mx-auto max-w-2xl lg:max-w-4xl">
               <figure className="mt-10">
-                <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
+                <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 dark:text-gray-200 sm:text-2xl sm:leading-9">
                   <p>
                     "As a lead designer, I appreciate the intuitive interface
                     and collaborative features that allow our team to bring our

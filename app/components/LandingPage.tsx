@@ -55,9 +55,7 @@ export default async function LandingPage() {
         className="text-6xl text-gray-500 my-5 mx-auto"
         pauseOnHover={true}
         autoFill={true}
-        gradient={true}
         speed={50}
-        gradientColor={[255, 255, 255]}
       >
         <SiNextdotjs className="mx-16 hover:text-orange-500" />
         <SiReact className="mx-16 hover:text-orange-500" />

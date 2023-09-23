@@ -9,7 +9,7 @@ export default function Features() {
           alt="visualize status"
           width={600}
           height={295}
-          className="p-5 m-3 shadow-xl shadow-orange-400 rounded-lg"
+          className="m-5 shadow-xl shadow-orange-400 rounded-lg"
         />
         <div className="my-auto">
           <h3 className="p-5 ms-8 font-bold">Visualize Status</h3>
@@ -24,7 +24,7 @@ export default function Features() {
           alt="update clients"
           width={600}
           height={295}
-          className="p-5 m-3 shadow-xl shadow-orange-400 rounded-lg"
+          className="m-5 shadow-xl shadow-orange-400 rounded-lg"
         />
         <div className="my-auto text-right">
           <h3 className="p-5 me-8 font-bold">Update Clients</h3>
@@ -39,7 +39,7 @@ export default function Features() {
           alt="fabrication control"
           width={600}
           height={295}
-          className="p-5 m-3 shadow-xl shadow-orange-400 rounded-lg"
+          className="m-5 shadow-xl shadow-orange-400 rounded-lg"
         />
         <div className="my-auto">
           <h3 className="p-5 ms-8 font-bold">Fabrication Control</h3>

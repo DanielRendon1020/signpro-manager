@@ -1,3 +1,16 @@
+import Dashboard from "../components/Dashboard";
+import DashNavbar from "../components/server/DashNavbar";
+
+
+export default function DashboardPage() {
+  return (
+    <>
+      <Dashboard />
+    </>
+  )
+}
+
+
 // import { Metadata } from "next";
 // import ProjectTable from "../components/server/ProjectTable";
 // import AddJob from "../components/client/AddJob";

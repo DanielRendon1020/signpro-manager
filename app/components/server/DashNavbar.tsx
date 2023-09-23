@@ -1,9 +1,23 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import { SignOutButton } from "../client/buttons";
+import { getServerSession } from "next-auth";
+// // import 'flowbite';
+// import { Popover } from "flowbite";
+// import type {  PopoverInterface } from "flowbite";
 
-export default function DashNavbar() {
+export default async function DashNavbar() {
+  const session = await getServerSession();
+  const userName = session?.user?.name as string;
+  const userImage = session?.user?.image as string;
+
+
+  // const handlePopover = (e: any) => {
+  //   e.preventDefault();
+  //   e.show();
+    
+  // }
+
   return (
     <>
       <nav className="bg-orange-500 dark:bg-orange-600 w-full z-20 top-0 left-0 border-b border-orange-300 dark:border-orange-600">
@@ -16,7 +30,12 @@ export default function DashNavbar() {
             className="ms-1 grayscale brightness-[5]"
           />
           <div className="flex md:order-2">
-            <SignOutButton />
+            <div className="text-white my-auto flex align-middle">
+              <p className="my-auto me-1">{userName}</p>
+              <SignOutButton />
+            </div>
+
+            {/* Nav collapse  */}
             <button
               data-collapse-toggle="navbar-sticky"
               type="button"
@@ -41,6 +60,7 @@ export default function DashNavbar() {
                 />
               </svg>
             </button>
+
           </div>
           <div
             className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
@@ -49,7 +69,7 @@ export default function DashNavbar() {
             <ul className="flex flex-col p-4 md:p-0 mt-4 font-bold text-xl border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:border-gray-700">
               <li>
                 <Link
-                  href="dashboard"
+                  href="/dashboard"
                   className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-200 md:p-0 md:dark:hover:text-gray-100 dark:text-white dark:hover:bg-orange-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-orange-700"
                 >
                   Dashboard
@@ -57,7 +77,7 @@ export default function DashNavbar() {
               </li>
               <li>
                 <Link
-                  href="/materials"
+                  href="/dashboard/materials"
                   className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-200 md:p-0 md:dark:hover:text-gray-100 dark:text-white dark:hover:bg-orange-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-orange-700"
                 >
                   Materials
@@ -67,36 +87,6 @@ export default function DashNavbar() {
           </div>
         </div>
       </nav>
-
-      {/* <div className="bg-orange-500 px-3">
-        <div className="mx-auto flex justify-between">
-          <Image
-            src="/logo.svg"
-            alt="SignPro Manager"
-            width={123}
-            height={47}
-            className="m-2 grayscale brightness-[5]"
-          />
-          <nav className="flex justify-between">
-            <ul className="flex my-auto text-white font-bold">
-              <li className="mx-12 text-2xl my-auto hover:text-gray-300">
-                <Link href="/dashboard">Dashboard</Link>
-              </li>
-              <li className="mx-12 text-2xl my-auto hover:text-gray-300">
-                <Link href="/materials">Materials</Link>
-              </li>
-              <li className="mx-12 text-2xl my-auto hover:text-gray-300">
-                <Link href="/new_job">New Job</Link>
-              </li>
-            </ul>
-          </nav>
-          <div className="flex font-bold text-xl">
-            <button className="mx-3 my-auto px-5 py-2 text-white hover:text-gray-300">
-              Sign Out
-            </button>
-          </div>
-        </div>
-      </div> */}
     </>
   );
 }

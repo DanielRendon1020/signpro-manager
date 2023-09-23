@@ -4,7 +4,7 @@ import { SignInButton } from "../client/buttons";
 
 export default function HomeNavbar() {
   return (
-    <div className="bg-gray-300 p-7">
+    <div className="bg-gray-300 dark:bg-gray-800 p-7">
       <div className="max-w-screen-2xl mx-auto">
         <nav className="flex justify-around">
           <ul className="flex my-auto text-gray-700 font-bold">

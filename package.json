@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "update-db-types": "npx supabase gen types typescript --project-id \"cetqiriynmzsotvvlvzc\" > lib/database.types.ts",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

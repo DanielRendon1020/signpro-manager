@@ -1,7 +1,7 @@
-// import db from "@/lib/initSupabase";
+
 import Link from "next/link";
 
-export default async function ProjectTable() {
+export default function ProjectTable() {
   // const projectData: Promise<Project[]> = db().select();
   // const projects = await projectData;
 

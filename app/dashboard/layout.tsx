@@ -1,19 +1,12 @@
 import DashNavbar from "../components/server/DashNavbar";
-import { getServerSession } from "next-auth";
 
-export default async function DashLayout({
-    children,
-  }: {
-    children: React.ReactNode;
-  }) {
 
-    const session = await getServerSession();
-
+export default function DashLayout({ children }: { children: React.ReactNode;}) {
 
   return (
-    <>
+    <section>
       <DashNavbar />
       {children}
-    </>
-  )
+    </section>
+  );
 }

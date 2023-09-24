@@ -1,8 +1,5 @@
 "use client";
 import { ChangeEvent, useState } from "react";
-import { AddressAutofill } from "@mapbox/search-js-react";
-import AutoFill from "../server/AutoFill";
-
 
 export default function AddJob() {
   const [ShowDate, setShowDate] = useState(false);
@@ -51,18 +48,15 @@ export default function AddJob() {
           </label>
         </div>
         <div className="relative z-0 w-full mb-6 group">
-          <AutoFill />
-          {/* <AddressAutofill accessToken={process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN}>
-              <input
-                type="text"
-                name="address"
-                id="address"
-                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-orange-500 focus:outline-none focus:ring-0 focus:border-orange-600 peer"
-                placeholder=" "
-                autoComplete="address-line1"
-                required
-              />
-            </AddressAutofill> */}
+            <input
+              type="text"
+              name="address"
+              id="address"
+              className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-orange-500 focus:outline-none focus:ring-0 focus:border-orange-600 peer"
+              placeholder=""
+              autoComplete=" "
+              required
+            />
           <label
             htmlFor="address"
             className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-orange-600 peer-focus:dark:text-orange-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"

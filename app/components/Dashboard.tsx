@@ -1,20 +1,18 @@
-import { Metadata } from "next";
+
 import ProjectTable from "../components/server/ProjectTable";
 import AddJob from "../components/client/AddJob";
 import MapView from "./MapView";
 
-export const metadata: Metadata = {
-  title: "Dashboard",
-};
 
-export default async function Dashboard() {
+
+export default function Dashboard() {
 
   return (
     <>
       <div className="flex">
         <AddJob />
         <div className="w-3/4">
-            {/* <MapView /> */}
+            <MapView />
         <div className="w-full p-10 mt-2">
           <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
             <div className="pb-4 bg-white dark:bg-gray-900">

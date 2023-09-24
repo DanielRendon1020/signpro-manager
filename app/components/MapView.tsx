@@ -1,7 +1,10 @@
 'use client'
 
 import 'mapbox-gl/dist/mapbox-gl.css';
-import Map, {NavigationControl }from 'react-map-gl'
+import dynamic from 'next/dynamic';
+
+const Map = dynamic(() => import('react-map-gl'), { ssr: false });
+import { NavigationControl }from 'react-map-gl'
 
 export default function MapView() {
     return (

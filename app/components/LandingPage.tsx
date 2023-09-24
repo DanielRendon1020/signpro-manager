@@ -14,16 +14,9 @@ import {
   SiBuymeacoffee,
 } from "react-icons/si";
 import { BsShieldFill } from "react-icons/bs";
-import { getServerSession } from 'next-auth';
-import { redirect } from "next/navigation";
 
-export default async function LandingPage() {
+export default function LandingPage() {
 
-  const session = await getServerSession();
-
-  if (session) {
-    redirect('/dashboard');
-  }
 
   return (
     <main className="max-w-screen-2xl mx-auto flex-1 ">

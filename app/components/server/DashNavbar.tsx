@@ -1,16 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SignOutButton } from "../client/buttons";
-import { getServerSession } from "next-auth";
 // // import 'flowbite';
 // import { Popover } from "flowbite";
 // import type {  PopoverInterface } from "flowbite";
 
-export default async function DashNavbar() {
-  const session = await getServerSession();
-  const userName = session?.user?.name as string;
-  const userImage = session?.user?.image as string;
-
+export default function DashNavbar() {
 
   // const handlePopover = (e: any) => {
   //   e.preventDefault();
@@ -31,7 +26,7 @@ export default async function DashNavbar() {
           />
           <div className="flex md:order-2">
             <div className="text-white my-auto flex align-middle">
-              <p className="my-auto me-1">{userName}</p>
+              <p className="my-auto me-1">User name</p>
               <SignOutButton />
             </div>
 

@@ -1,14 +1,10 @@
-import { getServerSession } from 'next-auth';
-import { redirect } from "next/navigation";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Materials",
+};
 
-export default async function Materials() {
-
-  const session = await getServerSession();
-
-  if (!session) {
-    redirect('/');
-  } 
+export default function Materials() {
 
   return (
     <div>Materials</div>

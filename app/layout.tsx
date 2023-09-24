@@ -2,8 +2,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
-import SessionProvider from "./Auth/SessionProvider";
-import { getServerSession } from "next-auth";
 
 const inter = Inter({ subsets: ["latin"] });
 const sansation = localFont({
@@ -32,15 +30,13 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
 
-  const session = await getServerSession()
+  
   return (
     
       <html lang="en" style={{ scrollBehavior: "smooth" }}>
         <body className={sansation.className}>
           <div className="flex-col selection:bg-orange-400 bg-gray-100">
-            <SessionProvider session={session}>
               {children}
-            </SessionProvider>
           </div>
         </body>
       </html>

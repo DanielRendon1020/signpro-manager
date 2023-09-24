@@ -4,11 +4,10 @@ import { NextResponse } from "next/server"
 
 export async function GET(request: Request){
 
-  let { data: posts, error } = await supabase
-  .from('posts')
+  let { data: projects, error } = await supabase
+  .from('projects')
   .select()
 
-    
-    return NextResponse.json(posts)
+    return NextResponse.json(projects)
   }
 

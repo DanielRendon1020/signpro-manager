@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { SignInButton } from "../client/buttons";
+import { SignInButton, SignUpButton } from "../client/buttons";
 
 export default function HomeNavbar() {
   return (
@@ -29,10 +29,8 @@ export default function HomeNavbar() {
             </li>
           </ul>
           <div className="flex font-bold text-xl">
+            <SignUpButton />
             <SignInButton />
-            {/* <button className="mx-3 my-auto px-5 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-full h-auto">
-              Sign In
-            </button> */}
           </div>
         </nav>
       </div>

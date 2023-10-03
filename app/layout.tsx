@@ -2,6 +2,11 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+import { cookies } from "next/headers";
+import { Database } from "@/lib/database.types";
+import { redirect } from "next/navigation";
+
 
 const inter = Inter({ subsets: ["latin"] });
 const sansation = localFont({
@@ -30,7 +35,16 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
 
-  
+  const supabase = createServerComponentClient<Database>({ cookies });
+  const {
+    data: { session },
+  } = await supabase.auth.getSession();
+
+  // if (session) {
+  //   await redirect("/dashboard");
+  // }
+
+
   return (
     
       <html lang="en" style={{ scrollBehavior: "smooth" }}>
